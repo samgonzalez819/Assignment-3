@@ -6,6 +6,7 @@ using namespace std;
 
 #define MAX_SIZE 100 //Maximum size of the stack
 
+//Define Class to show the stack data structure
 class Stack {
 private:
     int arr[MAX_SIZE];  //Array for storing stack values
@@ -23,7 +24,7 @@ public:
             cout << "Stack Overflow\n";
             return -1; //Shows a failure due to overflow
         }
-        arr[++top] = T; //Function to add T to the stack and updates the top index
+        arr[++top] = T; //Function to add T to the stack and updates the top index by adding an element
         return 0; //Indicates solid functionality
     }
 
