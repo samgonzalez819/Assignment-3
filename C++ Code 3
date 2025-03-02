@@ -14,7 +14,8 @@ private:
 
 public:
     //Constructor to set up the stack
-    Stack() {
+    Stack(): arr{}
+    {
         top = -1; //Set the stack to be empty
     }
 
@@ -34,7 +35,7 @@ public:
             cout << "Stack Underflow\n";
             return -1; //Shows a failure due to underflow
         }
-        int topElement = arr[top]; //Top element
+        const int topElement = arr[top]; //Top element
         top--; //Function that decreases the top index to pop the element needed
         return topElement; //Return Pop Statement
     }
@@ -52,7 +53,6 @@ int main() {
     cout << "Top and pop: " << stack.topandpop() << endl; //Prints 15
     cout << "Top and pop: " << stack.topandpop() << endl; //Prints 10
     cout << "Top and pop: " << stack.topandpop() << endl; //Prints 5
-    cout << "Top and pop: " << stack.topandpop() << endl; //Prints Stack underflow and displays the function for the return -1
-
+    cout << "Top and pop: " << stack.topandpop() << endl; //Prints Stack underflow and displays the return -1 statement
     return 0;
 }
